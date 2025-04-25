@@ -1,1 +1,62 @@
 @import "tailwindcss";
+
+:root {
+  --bg-screen: #f3f4f6; /* gray-100 */
+  --bg-header: #ffffff; /* white */
+  --bg-main: #ffffff; /* white */
+  --bg-dashboard: #f3f4f6; /* gray-100 */
+  --bg-dashboard-card: #ffffff; /* white */
+  --text-h1: #1d4ed8; /* blue-700 */
+  --text-h2: #1f2937; /* gray-800 */
+  --text-h3: #1f2937; /* gray-800 */
+  --text-p: #4b5563; /* gray-700 */
+  --text-span: #1f2937; /* gray-800 */
+  --text-span-inner: #1d4ed8; /* blue-700 */
+  --text-p-signedout: #4b5563; /* gray-600 */
+}
+
+[data-theme="dark"] {
+  --bg-screen: #1f2937; /* gray-900 */
+  --bg-header: #374151; /* gray-800 */
+  --bg-main: ۘ#374151; /* gray-800 */
+  --bg-dashboard: #1f2937; /* gray-900 */
+  --bg-dashboard-card: #374151; /* gray-800 */
+  --text-h1: #93c5fd; /* blue-300 */
+  --text-h2: #e5e7eb; /* gray-200 */
+  --text-h3: #e5e7eb; /* gray-200 */
+  --text-p: #d1d5db; /* gray-300 */
+  --text-span: #e5e7eb; /* gray-200 */
+  --text-span-inner: #93c5fd; /* blue-300 */
+  --text-p-signedout: #9ca3af; /* gray-400 */
+}
+
+body {
+  background-color: var(--bg-screen);
+}
+header {
+  background-color: var(--bg-header);
+}
+main div {
+  background-color: var(--bg-main);
+}
+h1 {
+  color: var(--text-h1);
+}
+h2 {
+  color: var(--text-h2);
+}
+h3 {
+  color: var(--text-h3);
+}
+p {
+  color: var(--text-p);
+}
+span {
+  color: var(--text-span);
+}
+span span {
+  color: var(--text-span-inner);
+}
+main p {
+  color: var(--text-p-signedout);
+}
