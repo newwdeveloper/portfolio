@@ -1,9 +1,5 @@
-import { useUser } from "@clerk/clerk-react";
-
-function Dashboard({ darkMode }) {
-  const { user, isSignedIn } = useUser();
-
-  if (!isSignedIn) {
+function Dashboard({ darkMode, user }) {
+  if (!user) {
     return (
       <div
         className="p-4 rounded-lg shadow"

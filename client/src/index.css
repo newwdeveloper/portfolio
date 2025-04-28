@@ -13,12 +13,18 @@
   --text-span: #1f2937; /* gray-800 */
   --text-span-inner: #1d4ed8; /* blue-700 */
   --text-p-signedout: #4b5563; /* gray-600 */
+  --primary-btn: #1d4ed8; /* blue-700 */
+  --secondary-btn: #10b981; /* green-500 */
+  --danger-btn: #ef4444; /* red-500 */
+  --neutral-btn: #d1d5db; /* gray-300 */
+  --box-shadow-light: rgba(0, 0, 0, 0.1); /* Light shadow */
+  --box-shadow-dark: rgba(255, 255, 255, 0.2); /* Dark shadow */
 }
 
 [data-theme="dark"] {
   --bg-screen: #1f2937; /* gray-900 */
   --bg-header: #374151; /* gray-800 */
-  --bg-main: ۘ#374151; /* gray-800 */
+  --bg-main: #374151; /* gray-800 */
   --bg-dashboard: #1f2937; /* gray-900 */
   --bg-dashboard-card: #374151; /* gray-800 */
   --text-h1: #93c5fd; /* blue-300 */
@@ -28,35 +34,185 @@
   --text-span: #e5e7eb; /* gray-200 */
   --text-span-inner: #93c5fd; /* blue-300 */
   --text-p-signedout: #9ca3af; /* gray-400 */
+  --primary-btn: #3b82f6; /* blue-500 */
+  --secondary-btn: #34d399; /* green-400 */
+  --danger-btn: #f87171; /* red-400 */
+  --neutral-btn: #4b5563; /* gray-600 */
+  --box-shadow-light: rgba(0, 0, 0, 0.5); /* Dark shadow */
+  --box-shadow-dark: rgba(255, 255, 255, 0.4); /* Light shadow */
 }
 
 body {
   background-color: var(--bg-screen);
 }
+
 header {
   background-color: var(--bg-header);
 }
+
 main div {
   background-color: var(--bg-main);
 }
+
 h1 {
   color: var(--text-h1);
 }
+
 h2 {
   color: var(--text-h2);
 }
+
 h3 {
   color: var(--text-h3);
 }
+
 p {
   color: var(--text-p);
 }
+
 span {
   color: var(--text-span);
 }
+
 span span {
   color: var(--text-span-inner);
 }
+
 main p {
   color: var(--text-p-signedout);
+}
+
+/* Style for containers like the login box */
+.login-box,
+.dashboard-card {
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px var(--box-shadow-light);
+  background-color: var(--bg-dashboard-card);
+}
+
+[data-theme="dark"] .login-box,
+[data-theme="dark"] .dashboard-card {
+  box-shadow: 0 2px 10px var(--box-shadow-dark);
+}
+
+/* Button Styles */
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Primary Button */
+button.primary {
+  background-color: var(--primary-btn);
+  color: white;
+}
+
+button.primary:hover {
+  background-color: #1e40af; /* blue-800 for hover */
+}
+
+[data-theme="dark"] button.primary {
+  background-color: var(--primary-btn);
+}
+
+[data-theme="dark"] button.primary:hover {
+  background-color: #1e3a8a; /* darker blue for dark mode hover */
+}
+
+/* Secondary Button */
+button.secondary {
+  background-color: var(--secondary-btn);
+  color: white;
+}
+
+button.secondary:hover {
+  background-color: #16a34a; /* green-600 for hover */
+}
+
+[data-theme="dark"] button.secondary {
+  background-color: var(--secondary-btn);
+}
+
+[data-theme="dark"] button.secondary:hover {
+  background-color: #10b981; /* darker green for dark mode hover */
+}
+
+/* Danger Button */
+button.danger {
+  background-color: var(--danger-btn);
+  color: white;
+}
+
+button.danger:hover {
+  background-color: #dc2626; /* red-600 for hover */
+}
+
+[data-theme="dark"] button.danger {
+  background-color: var(--danger-btn);
+}
+
+[data-theme="dark"] button.danger:hover {
+  background-color: #f87171; /* darker red for dark mode hover */
+}
+
+/* Neutral Button */
+button.neutral {
+  background-color: var(--neutral-btn);
+  color: white;
+}
+
+button.neutral:hover {
+  background-color: #6b7280; /* gray-500 for hover */
+}
+
+[data-theme="dark"] button.neutral {
+  background-color: var(--neutral-btn);
+}
+
+[data-theme="dark"] button.neutral:hover {
+  background-color: #4b5563; /* darker gray for dark mode hover */
+}
+
+/* Input styles */
+input {
+  background-color: var(--bg-dashboard-card);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--text-p);
+}
+
+[data-theme="dark"] input {
+  background-color: var(--bg-dashboard-card);
+  border-color: #444;
+  color: var(--text-p);
+}
+
+/* Error message styles */
+.error-message {
+  color: #ff0000;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+/* Links */
+a {
+  color: var(--text-h1);
+}
+
+[data-theme="dark"] a {
+  color: var(--text-span-inner);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+[data-theme="dark"] a:hover {
+  color: var(--text-span-inner);
 }
